@@ -3,6 +3,7 @@ import 'package:fs_package/ui/ticket/list/view/components/loading/ticket_list_lo
 import 'package:fs_package/ui/ticket/list/view/components/ticket_list_screen_content.dart';
 import 'package:fs_package/ui/ticket/list/viewmodel/model/ticket_list_ui_state.dart';
 import 'package:fs_package/ui/ticket/list/viewmodel/ticket_list_view_model.dart';
+import 'package:flutter/services.dart';
 
 class TicketListScreen extends StatefulWidget {
   const TicketListScreen({super.key});
@@ -28,6 +29,14 @@ class _TicketListScreenState extends State<TicketListScreen> {
       appBar: AppBar(
         title: Text(
           'Tickets',
+        ),
+        leading: BackButton(
+          onPressed: () => {
+            if (Navigator.canPop(context))
+              {Navigator.pop(context)}
+            else
+              {SystemNavigator.pop()}
+          },
         ),
       ),
       body: StreamBuilder<TicketListUIState>(
