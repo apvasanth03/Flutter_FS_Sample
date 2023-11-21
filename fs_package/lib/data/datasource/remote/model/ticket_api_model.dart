@@ -1,25 +1,22 @@
 class TicketApiModel {
-  final int? displayId;
-  final String? humanDisplayId;
+  final int? id;
   final String? subject;
-  final String? responderName;
-  final String? statusName;
+  final String? descriptionText;
+  final String? type;
 
   TicketApiModel({
-    required this.displayId,
-    required this.humanDisplayId,
+    required this.id,
     required this.subject,
-    required this.responderName,
-    required this.statusName,
+    required this.descriptionText,
+    required this.type,
   });
 
   factory TicketApiModel.fromJson(Map<String, dynamic> json) {
     return TicketApiModel(
-      displayId: json['display_id'] as int?,
-      humanDisplayId: json['human_display_id'] as String?,
+      id: json['id'] as int?,
       subject: json['subject'] as String?,
-      responderName: json['responder_name'] as String?,
-      statusName: json['status']['name'] as String?,
+      descriptionText: json['description_text'] as String?,
+      type: json['type'] as String?,
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:fs_package/data/model/ticket.dart';
 import 'package:fs_package/data/repository/ticket_repository.dart';
-import 'package:fs_package/ui/tickets/viewmodel/mapper/ticket_ui_mapper.dart';
-import 'package:fs_package/ui/tickets/viewmodel/model/ticket_list_ui_state.dart';
+import 'package:fs_package/ui/ticket/list/viewmodel/mapper/ticket_ui_mapper.dart';
+import 'package:fs_package/ui/ticket/list/viewmodel/model/ticket_list_ui_state.dart';
 import 'package:rxdart/rxdart.dart';
 
 class TicketListViewModel {
@@ -31,10 +31,7 @@ class TicketListViewModel {
     try {
       _uiStateStream.add(TicketListUIStateLoading());
 
-      final tickets = await _ticketRepository.getTickets(
-        filter: 'all',
-        page: 1,
-      );
+      final tickets = await _ticketRepository.getTickets();
       _loadTicketsSuccess(tickets);
     } catch (e) {
       _loadTicketsFailure();

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fs_package/ui/tickets/view/components/loading/ticket_list_loading.dart';
-import 'package:fs_package/ui/tickets/view/components/ticket_list_screen_content.dart';
-import 'package:fs_package/ui/tickets/viewmodel/model/ticket_list_ui_state.dart';
-import 'package:fs_package/ui/tickets/viewmodel/ticket_list_view_model.dart';
+import 'package:fs_package/ui/ticket/list/view/components/loading/ticket_list_loading.dart';
+import 'package:fs_package/ui/ticket/list/view/components/ticket_list_screen_content.dart';
+import 'package:fs_package/ui/ticket/list/viewmodel/model/ticket_list_ui_state.dart';
+import 'package:fs_package/ui/ticket/list/viewmodel/ticket_list_view_model.dart';
 
 class TicketListScreen extends StatefulWidget {
   const TicketListScreen({super.key});
@@ -26,7 +26,9 @@ class _TicketListScreenState extends State<TicketListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tickets'),
+        title: Text(
+          'Tickets',
+        ),
       ),
       body: StreamBuilder<TicketListUIState>(
         stream: _viewModel.uiStateStream,

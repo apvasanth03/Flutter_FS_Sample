@@ -4,11 +4,10 @@ import 'package:fs_package/data/model/ticket.dart';
 extension TicketApiModelMapper on TicketApiModel {
   Ticket toDataModel() {
     return Ticket(
-      displayId: displayId ?? -1,
-      humanDisplayId: humanDisplayId ?? '',
+      id: id ?? -1,
       subject: subject ?? '',
-      responderName: responderName ?? '',
-      statusName: statusName ?? '',
+      descriptionText: descriptionText ?? '',
+      type: type ?? '',
     );
   }
 }

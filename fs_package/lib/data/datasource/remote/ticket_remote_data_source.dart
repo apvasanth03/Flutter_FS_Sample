@@ -8,14 +8,8 @@ import 'package:http/http.dart' as http;
 
 class TicketRemoteDataSource {
   /// Get Tickets.
-  Future<List<Ticket>> getTickets({
-    required String filter,
-    required int page,
-  }) async {
-    final url = TicketRemoteUtil.getTicketsUrl(
-      filter: filter,
-      page: page,
-    );
+  Future<List<Ticket>> getTickets() async {
+    final url = TicketRemoteUtil.getTicketsUrl();
 
     final response = await http.get(
       url,

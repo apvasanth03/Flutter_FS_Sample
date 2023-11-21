@@ -1,15 +1,13 @@
 class TicketUIModel {
-  final int displayId;
+  final int id;
   final String humanDisplayId;
   final String subject;
-  final String agentName;
-  final String statusName;
+  final String descriptionText;
 
   TicketUIModel({
-    required this.displayId,
+    required this.id,
     required this.humanDisplayId,
     required this.subject,
-    required this.agentName,
-    required this.statusName,
+    required this.descriptionText,
   });
 }

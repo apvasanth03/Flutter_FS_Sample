@@ -1,15 +1,13 @@
 class Ticket {
-  final int displayId;
-  final String humanDisplayId;
+  final int id;
   final String subject;
-  final String responderName;
-  final String statusName;
+  final String descriptionText;
+  final String type;
 
   Ticket({
-    required this.displayId,
-    required this.humanDisplayId,
+    required this.id,
     required this.subject,
-    required this.responderName,
-    required this.statusName,
+    required this.descriptionText,
+    required this.type,
   });
 }

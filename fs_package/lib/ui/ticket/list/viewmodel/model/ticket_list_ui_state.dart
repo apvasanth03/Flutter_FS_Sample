@@ -1,4 +1,4 @@
-import 'package:fs_package/ui/tickets/viewmodel/model/ticket_ui_model.dart';
+import 'package:fs_package/ui/ticket/list/viewmodel/model/ticket_ui_model.dart';
 
 sealed class TicketListUIState {}
 

@@ -9,14 +9,8 @@ class TicketRepository {
   TicketRepository.create() : this(TicketRemoteDataSource());
 
   /// Get Tickets.
-  Future<List<Ticket>> getTickets({
-    required String filter,
-    required int page,
-  }) async {
-    final tickets = await _ticketRemoteDataSource.getTickets(
-      filter: filter,
-      page: page,
-    );
+  Future<List<Ticket>> getTickets() async {
+    final tickets = await _ticketRemoteDataSource.getTickets();
     return tickets;
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fs_package/ui/tickets/view/screen/ticket_list_screen.dart';
+import 'package:fs_package/ui/ticket/list/view/screen/ticket_list_screen.dart';
 
 class FSApp extends StatelessWidget {
   const FSApp({super.key});
